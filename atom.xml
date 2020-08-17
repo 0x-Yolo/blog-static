@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>LE-LAB</title>
+  <title>Brain_Worm_Lab</title>
   
-  <subtitle>学习笔记</subtitle>
+  <subtitle>Code|Economy|Life</subtitle>
   <link href="http://blog.lelelele.top/atom.xml" rel="self"/>
   
   <link href="http://blog.lelelele.top/"/>

@@ -45,36 +45,26 @@
   <entry>
     <title>docker的学习历险（1）</title>
     <url>/p/33637df3.html</url>
-    <content><![CDATA[<h1 id="Docker学习历险："><a href="#Docker学习历险：" class="headerlink" title="Docker学习历险："></a>Docker学习历险：</h1><blockquote>
+    <content><![CDATA[<h2 id="Docker学习历险："><a href="#Docker学习历险：" class="headerlink" title="Docker学习历险："></a>Docker学习历险：</h2><blockquote>
 <p><strong>从零到一学习Docker，享受溺水求生的乐趣。</strong></p>
 </blockquote>
-<ol>
-<li>遇到权限不足的问题：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[xxxxxxxx@xxxxxxxxxxxx ~]$ docker pull nginx</span><br><span class="line">Using default tag: latest</span><br><span class="line">Got permission denied while trying to connect to the Docker daemon socket at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock: Post http:&#x2F;&#x2F;%2Fvar%2Frun%2Fdocker.sock&#x2F;v1.40&#x2F;images&#x2F;create?fromImage&#x3D;nginx&amp;tag&#x3D;latest: dial unix &#x2F;var&#x2F;run&#x2F;docker.sock: connect: permission denied</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
+<h3 id="遇到权限不足的问题："><a href="#遇到权限不足的问题：" class="headerlink" title="遇到权限不足的问题："></a>遇到权限不足的问题：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[xxxxxxxx@xxxxxxxxxxxx ~]$ docker pull nginx</span><br><span class="line">Using default tag: latest</span><br><span class="line">Got permission denied while trying to connect to the Docker daemon socket at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock: Post http:&#x2F;&#x2F;%2Fvar%2Frun%2Fdocker.sock&#x2F;v1.40&#x2F;images&#x2F;create?fromImage&#x3D;nginx&amp;tag&#x3D;latest: dial unix &#x2F;var&#x2F;run&#x2F;docker.sock: connect: permission denied</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <ul>
-<li>通过将用户添加到docker用户组可以将sudo去掉，命令如下。<a href="https://blog.csdn.net/u011337602/article/details/104541261">参考</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo groupadd docker #添加docker用户组</span><br><span class="line">sudo gpasswd -a $USER docker #将登陆用户加入到docker用户组中</span><br><span class="line">newgrp docker #更新用户组</span><br></pre></td></tr></table></figure>
+<li>通过将用户添加到docker用户组可以将sudo去掉，命令如下。<a href="https://blog.csdn.net/u011337602/article/details/104541261">参考</a><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo groupadd docker #添加docker用户组</span><br><span class="line">sudo gpasswd -a $USER docker #将登陆用户加入到docker用户组中</span><br><span class="line">newgrp docker #更新用户组</span><br></pre></td></tr></table></figure>
 
 
-<ol start="2">
-<li>解决linux下sudo更改文件权限报错<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[sudo] password for dngj: </span><br><span class="line">dngj is not in the sudoers file.  This incident will be reported.</span><br></pre></td></tr></table></figure></li>
-</ol>
-<ul>
-<li><a href="https://blog.csdn.net/sinat_36118270/article/details/62899093">参考</a><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod u+w &#x2F;etc&#x2F;sudoers #修改sudo文件的只读权限</span><br><span class="line">vi &#x2F;etc&#x2F;sudoers</span><br><span class="line">youuser ALL&#x3D;(ALL) ALL #youuser你的用户名</span><br><span class="line">chmod u-w &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<ol start="3">
-<li>docker和nginx的耦合：<a href="https://www.cnblogs.com/zfding/p/11429695.html">参考</a></li>
-</ol>
+<h3 id="解决linux下sudo更改文件权限报错"><a href="#解决linux下sudo更改文件权限报错" class="headerlink" title="解决linux下sudo更改文件权限报错"></a>解决linux下sudo更改文件权限报错</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[sudo] password for dngj: </span><br><span class="line">dngj is not in the sudoers file.  This incident will be reported.</span><br></pre></td></tr></table></figure>
 <ul>
+<li><a href="https://blog.csdn.net/sinat_36118270/article/details/62899093">参考</a><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod u+w &#x2F;etc&#x2F;sudoers #修改sudo文件的只读权限</span><br><span class="line">vi &#x2F;etc&#x2F;sudoers</span><br><span class="line">youuser ALL&#x3D;(ALL) ALL #youuser你的用户名</span><br><span class="line">chmod u-w &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="docker和nginx的耦合：参考"><a href="#docker和nginx的耦合：参考" class="headerlink" title="docker和nginx的耦合：参考"></a>docker和nginx的耦合：<a href="https://www.cnblogs.com/zfding/p/11429695.html">参考</a></h3><ul>
 <li>主要有两种方法：1，直接在docker里面修改conf。2，通过挂载，将本地的配置文件挂载到docker上，维持原来的耦合关系。</li>
 </ul>
-<ol start="4">
-<li>image和docker container的关系？</li>
-<li>bash进入docker以后修改并保存：<a href="https://blog.csdn.net/bugzeroman/article/details/82457842?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">参考</a></li>
-</ol>
-<ul>
+<h3 id="image和docker-container的关系？"><a href="#image和docker-container的关系？" class="headerlink" title="image和docker container的关系？"></a>image和docker container的关系？</h3><h3 id="bash进入docker以后修改并保存：参考"><a href="#bash进入docker以后修改并保存：参考" class="headerlink" title="bash进入docker以后修改并保存：参考"></a>bash进入docker以后修改并保存：<a href="https://blog.csdn.net/bugzeroman/article/details/82457842?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">参考</a></h3><ul>
 <li><code>docker exec –it  3bd0eef03413 bash</code>  进入正在运行的容器内</li>
 <li>进入容器后，就可以修改镜像了，比如修改镜像中已经部署的代码或者安装新的软件或包等，修改完成之后，<code>exit</code> 退出容器s</li>
 <li><code>docker commit 3bd0eef03413  demo：v1.3</code>  提交你刚才修改的镜像，新的镜像名称为demo，版本为v1.1</li>

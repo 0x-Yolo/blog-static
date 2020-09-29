@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.lelelele.top/p/af935060.html</loc>
+    
+    <lastmod>2020-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.lelelele.top/p/af935060.html</loc>
+    
+    <lastmod>2020-09-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.lelelele.top/p/33637df3.html</loc>
     
     <lastmod>2020-08-21</lastmod>
@@ -53,7 +67,7 @@
 
   <url>
     <loc>http://blog.lelelele.top/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,56 +75,70 @@
   
   <url>
     <loc>http://blog.lelelele.top/tags/orthofinder/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.lelelele.top/tags/Mac/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.lelelele.top/tags/bioinformatics/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.lelelele.top/tags/%E5%9F%BA%E5%9B%A0%E5%AE%B6%E6%97%8F/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.lelelele.top/tags/%E8%BF%9B%E5%8C%96/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.lelelele.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.lelelele.top/tags/%E9%87%8F%E5%8C%96/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.lelelele.top/tags/docker/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lelelele.top/tags/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81/</loc>
+    <lastmod>2020-09-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lelelele.top/tags/DECP/</loc>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -119,14 +147,21 @@
   
   <url>
     <loc>http://blog.lelelele.top/categories/%E5%9F%BA%E5%9B%A0%E5%AE%B6%E6%97%8F%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.lelelele.top/categories/%E5%AD%A6%E4%B9%A0%E5%8E%86%E9%99%A9/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-09-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.lelelele.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
